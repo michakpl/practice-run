@@ -33,7 +33,7 @@ type Response struct {
 
 func main() {
 	chat := &Chat{
-		rooms: make(map[string]Room),
+		rooms: make(map[string]*Room),
 	}
 
 	http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
